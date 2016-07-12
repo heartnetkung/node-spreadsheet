@@ -56,7 +56,7 @@ var parseFields = function(fields) {
 	for (var i = 0, ii = fields.length; i < ii; i++) {
 		var temp = fields[i].split(/\s*:\s*/);
 		if (temp.length !== 2 || !/int|string|float|json/.test(temp[1]))
-			throw new Error('Incorrect error syntax: ' + temp);
+			throw new Error('Incorrect field syntax: ' + temp);
 		ans.push({
 			name: temp[0],
 			type: temp[1]
